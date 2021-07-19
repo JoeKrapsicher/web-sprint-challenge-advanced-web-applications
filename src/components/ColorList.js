@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import fetchColorService from "../services/fetchColorService";
 
 import Color from './Color';
 import EditMenu from './EditMenu';

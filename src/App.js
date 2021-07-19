@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Login from "./components/Login";
 import "./styles.scss";
+import { PrivateRoute } from "./helpers/PrivateRoute";
+import ColorList from "./components/ColorList";
 
 function App() {
   return (
@@ -12,7 +14,7 @@ function App() {
           Color Picker Sprint Challenge
           <a data-testid="logoutButton" href="#">logout</a>
         </header> 
-
+        <PrivateRoute path='/colors'component={ColorList}/>
         <Route exact path="/" component={Login} />
       </div>
     </Router>
